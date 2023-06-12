@@ -263,15 +263,15 @@ class ViewController: NSViewController {
                 // Bundle x/y for first touch
                 let firstBundle = OSCBundle([
                     .message("/tuio/2D/cur/0/alive", values: [1]),
-                    .message("/tuio/2D/cur/0", values: [firstTouchX, firstTouchY]),
+                    .message("/tuio/2D/cur/0", values: [firstTouchX, firstTouchY, 0.5, 0.5, 1]),
                     .message("/tuio/2D/cur/1/alive", values: [1]),
-                    .message("/tuio/2D/cur/1", values: [secondTouchX, secondTouchY]),
+                    .message("/tuio/2D/cur/1", values: [secondTouchX, secondTouchY, 0.5, 0.5, 1]),
                     .message("/tuio/2D/cur/2/alive", values: [1]),
-                    .message("/tuio/2D/cur/2", values: [thirdTouchX, thirdTouchY]),
+                    .message("/tuio/2D/cur/2", values: [thirdTouchX, thirdTouchY, 0.5, 0.5, 1]),
                     .message("/tuio/2D/cur/3/alive", values: [1]),
-                    .message("/tuio/2D/cur/3", values: [fourthTouchX, fourthTouchY]),
+                    .message("/tuio/2D/cur/3", values: [fourthTouchX, fourthTouchY, 0.5, 0.5, 1]),
                     .message("/tuio/2D/cur/4/alive", values: [1]),
-                    .message("/tuio/2D/cur/4", values: [fifthTouchX, fifthTouchY])
+                    .message("/tuio/2D/cur/4", values: [fifthTouchX, fifthTouchY, 0.5, 0.5, 1])
                     
                 ])
                 
