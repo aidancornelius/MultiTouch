@@ -1179,11 +1179,34 @@ IA
                                                         <action selector="captureCursor:" target="XfG-lQ-9wD" id="42f-T4-Q3G"/>
                                                     </connections>
                                                 </button>
-                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G35-4j-zin">
-                                                    <rect key="frame" x="10" y="320" width="279" height="32"/>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b02-4z-x2H">
+                                                    <rect key="frame" x="257" y="3" width="38" height="38"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    <buttonCell key="cell" type="push" title="Send to TUIO (UDP 3333)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gM4-sE-Mzk">
-                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="4Uk-eR-yRf"/>
+                                                </imageView>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEC-Kx-gDe">
+                                                    <rect key="frame" x="15" y="19" width="178" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="© 2023 Aidan Cornelius-Bell" id="JN0-pv-5p0">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2W-Qk-txe">
+                                                    <rect key="frame" x="17" y="3" width="232" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="inline" title="Borrowing from the excellent OSCKit" bezelStyle="inline" alignment="left" inset="2" id="qid-dE-OXz">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <color key="contentTintColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                </button>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G35-4j-zin">
+                                                    <rect key="frame" x="10" y="261" width="279" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="push" title="Route to TUIO (UDP 3333)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gM4-sE-Mzk">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                         <string key="keyEquivalent" base64-UTF8="YES">
 IA
@@ -1191,19 +1214,14 @@ IA
                                                     </buttonCell>
                                                     <color key="bezelColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
                                                     <connections>
-                                                        <action selector="captureCursor:" target="XfG-lQ-9wD" id="8tT-CK-7RT"/>
+                                                        <action selector="tuioButtonAction:" target="XfG-lQ-9wD" id="oxH-aK-noN"/>
                                                     </connections>
                                                 </button>
-                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b02-4z-x2H">
-                                                    <rect key="frame" x="264" y="-3" width="38" height="38"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="4Uk-eR-yRf"/>
-                                                </imageView>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMM-0L-rZ9">
-                                                    <rect key="frame" x="10" y="288" width="279" height="32"/>
+                                                    <rect key="frame" x="10" y="229" width="279" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                    <buttonCell key="cell" type="push" title="Send to OSC (UDP 8888)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xOl-Oj-edi">
-                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <buttonCell key="cell" type="push" title="Route to OSC (UDP 8888)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xOl-Oj-edi">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                         <string key="keyEquivalent" base64-UTF8="YES">
 IA
@@ -1211,7 +1229,45 @@ IA
                                                     </buttonCell>
                                                     <color key="bezelColor" name="systemBrownColor" catalog="System" colorSpace="catalog"/>
                                                     <connections>
-                                                        <action selector="captureCursor:" target="XfG-lQ-9wD" id="okd-Vx-sfH"/>
+                                                        <action selector="oscButtonAction:" target="XfG-lQ-9wD" id="tj7-qg-XDB"/>
+                                                    </connections>
+                                                </button>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JqG-ch-nTW">
+                                                    <rect key="frame" x="17" y="323" width="134" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Send this to TUIO on:" id="iZa-wV-jhm">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XjV-jF-jjS">
+                                                    <rect key="frame" x="17" y="298" width="265" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="172.16.18.12 or ::1" drawsBackground="YES" id="ycz-9H-9Yf">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="niG-Ea-5gs">
+                                                    <rect key="frame" x="19" y="345" width="263" height="5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </box>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pD4-rE-BMc">
+                                                    <rect key="frame" x="10" y="186" width="279" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="push" title="Disable logging (speeds things up)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="V5v-JW-qqc">
+                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                        <string key="keyEquivalent" base64-UTF8="YES">
+IA
+</string>
+                                                    </buttonCell>
+                                                    <color key="bezelColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="contentTintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                                    <connections>
+                                                        <action selector="loggingButtonAction:" target="XfG-lQ-9wD" id="xcl-iX-mgi"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1227,12 +1283,16 @@ IA
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="OSCButton" destination="UMM-0L-rZ9" id="wEX-BP-jmH"/>
+                        <outlet property="TUIOButton" destination="G35-4j-zin" id="jZl-8t-1Ji"/>
                         <outlet property="absXField" destination="RRb-Uy-SgP" id="b3l-mg-tKs"/>
                         <outlet property="absYField" destination="caF-KE-OzW" id="8Ju-vp-WuM"/>
                         <outlet property="absZField" destination="OwU-Wo-5ip" id="hGf-co-xpe"/>
                         <outlet property="cursorCapture" destination="Ghc-BO-q0r" id="g26-I4-0Ru"/>
+                        <outlet property="ipAddressField" destination="XjV-jF-jjS" id="XkE-Fv-10U"/>
                         <outlet property="logField" destination="tF0-zN-9vP" id="sEF-eh-b4B"/>
                         <outlet property="logView" destination="t0x-9o-Ip3" id="Hfp-87-KQc"/>
+                        <outlet property="loggingButton" destination="pD4-rE-BMc" id="QNd-g0-lQ6"/>
                         <outlet property="xCMul0" destination="Zg7-sq-YJ0" id="Akp-WX-G6z"/>
                         <outlet property="xCMul1" destination="2eo-zL-TDA" id="fSb-cC-hnd"/>
                         <outlet property="xCMul2" destination="fg2-XP-CB7" id="iGb-AM-fXR"/>

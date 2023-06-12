@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12C199D82A36C07300110954 /* OSCKit in Frameworks */ = {isa = PBXBuildFile; productRef = 12C199D72A36C07300110954 /* OSCKit */; };
 		12F8D2542A36784B00AE5AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F8D2532A36784B00AE5AA4 /* AppDelegate.swift */; };
 		12F8D2562A36784B00AE5AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F8D2552A36784B00AE5AA4 /* ViewController.swift */; };
 		12F8D2582A36784C00AE5AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F8D2572A36784C00AE5AA4 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C199D82A36C07300110954 /* OSCKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,9 @@
 			dependencies = (
 			);
 			name = MultiTouch;
+			packageProductDependencies = (
+				12C199D72A36C07300110954 /* OSCKit */,
+			);
 			productName = MultiTouch;
 			productReference = 12F8D2502A36784B00AE5AA4 /* MultiTouch.app */;
 			productType = "com.apple.product-type.application";
@@ -105,6 +110,9 @@
 				Base,
 			);
 			mainGroup = 12F8D2472A36784B00AE5AA4;
+			packageReferences = (
+				12C199D62A36C07300110954 /* XCRemoteSwiftPackageReference "OSCKit" */,
+			);
 			productRefGroup = 12F8D2512A36784B00AE5AA4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12C199D62A36C07300110954 /* XCRemoteSwiftPackageReference "OSCKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/orchetect/OSCKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12C199D72A36C07300110954 /* OSCKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12C199D62A36C07300110954 /* XCRemoteSwiftPackageReference "OSCKit" */;
+			productName = OSCKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 12F8D2482A36784B00AE5AA4 /* Project object */;
 }
